@@ -1,9 +1,4 @@
 USE quickbite;
-
--- 1. Purani table ko drop karein taaki column conflict na ho
-DROP TABLE IF EXISTS restaurants;
-
--- 2. Nayi table create karein
 CREATE TABLE restaurants (
     restaurant_id INT PRIMARY KEY,
     restaurant_name VARCHAR(100),
@@ -18,7 +13,6 @@ CREATE TABLE restaurants (
     brand VARCHAR(100)
 );
 
--- 3. Complete 30 Records Insert Karein
 INSERT INTO restaurants VALUES 
 (101, 'Spice Route', 'North Indian', 'Pune', 4.5, 420, 18500, 39, 32, 'Amit Sharma', 'Spice Route'),
 (102, 'South Tiffin House', 'South Indian', 'Pune', 4.3, 260, 14300, 29, 25, 'Priya Nair', 'South Tiffin'),
@@ -50,8 +44,6 @@ INSERT INTO restaurants VALUES
 (128, 'Namma Meals', 'South Indian', 'Bengaluru', 4.4, 275, 23900, 19, 27, 'Kavya Shetty', 'Namma Meals'),
 (129, 'Lassi Lab', 'Beverages', 'Pune', 4.1, 160, 18200, 19, 21, 'Dev Malhotra', 'Lassi Lab'),
 (130, 'Flame & Grill', 'BBQ', 'Mumbai', 4.8, 880, 8300, 79, 52, 'Aditya Kapoor', 'Flame & Grill');
-
--- 4. Result Check Karein
 SELECT * FROM restaurants;
 SELECT * FROM restaurants WHERE  rating > 4.5;
 SELECT * FROM restaurants WHERE avg_order_value < 300;
